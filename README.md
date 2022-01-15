@@ -1,1 +1,0 @@
-# LotVue-ROR-CodeTest

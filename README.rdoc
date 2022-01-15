@@ -3,6 +3,37 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
+Coding Scenario
+
+1. Create a rails application.
+
+2. Create an interface to add roles and store into a table.
+
+3. Create an Interface to "Hide Roles".
+     a. Add a button called Hide Roles.
+     b. On clicking Hide Roles button, show list of roles from table(step 2) with check boxes.
+     c. Store the list of checked roles in a database table.
+
+4. Create an Interface to insert user details like 
+     a. First Name, Last Name, Email  -- Text box for entering data
+     b. Role - get data from step 2 except roles selected in step3 and show in multi-select drop-down.
+     c. upload one or more images for a user --- (Optional).
+
+
+5. In a web page add one more button called SHOW USERS and using AJAX CALL fetch all the users from the given users table except the users with roles selected in step 4.
+
+6. Display users in the following table format
+     User_Images (Optional), First Name, Last Name, Role
+
+7. Implement pagination and sorting.
+
+8. Add filters  - In a drop down show all the roles except roles selected in step3 and show the results based on the filter selected.
+
+9. Use Bootstrap and datatables to design table.
+
+
+
+
 Things you may want to cover:
 
 * Ruby version
