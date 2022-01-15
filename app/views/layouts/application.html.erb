@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>LotVueCodeTest</title>
+	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div class="container-fluid text-center">    
+		  <div class="row content">
+		    <div class="col-sm-8 text-left"> 
+		      <h1>LotVue Code Test</h1>
+		      <%= yield %>
+		    </div>
+		  </div>
+		</div>
+	</body>
+</html>

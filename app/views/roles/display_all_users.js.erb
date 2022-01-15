@@ -1,0 +1,20 @@
+$('#disp_users').html("<%= escape_javascript (render partial: 'users/display_users',:object => @users) %>");
+
+$(document).ready(function() {
+  $('#roles_table').DataTable();
+  $('#show_user').click(function() {
+    return $.ajax({
+      url: '/roles/display_all_users'
+    });
+  });
+  $('#hide_roles').click(function() {
+    var role_ids;
+    role_ids = [];
+    $('input:checkbox[name=\'is_hidden[]\']:checked').each(function() {
+       role_ids.push($(this).attr('id').substring(8));
+    });
+    return $.ajax({
+      url: '/roles/update_hidden_values?role_ids=' + role_ids
+    });
+  });
+});

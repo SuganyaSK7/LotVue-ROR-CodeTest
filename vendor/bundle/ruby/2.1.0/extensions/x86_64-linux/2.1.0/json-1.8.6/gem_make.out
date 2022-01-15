@@ -1,0 +1,10 @@
+/home/suganya/.rvm/rubies/ruby-2.1.7/bin/ruby -r ./siteconf20170824-14196-1v0vs9c.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+make "DESTDIR=" install
+installing default libraries

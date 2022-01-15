@@ -1,0 +1,29 @@
+<h3>List Of Users Without role(s)</h3>
+<div class="row">
+	<div class="col-md-10">
+		<% if @users.present? %>
+			<table class="table table-striped" id="users_table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Role</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @users.each do |user| %>
+						<tr>
+							<td><%= link_to(user.first_name.to_s + ' ' + user.last_name.to_s , user) %></td>
+							<td><%= user.email %></td>
+							<td><%=raw user.roles.map { |e| link_to(e.name,e) }.join(' ,') %></td>
+							<td><%=link_to 'Edit', edit_user_path(user) %></td>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
+		<% else %>
+			No Records Found
+		<% end %>
+	</div>
+</div>

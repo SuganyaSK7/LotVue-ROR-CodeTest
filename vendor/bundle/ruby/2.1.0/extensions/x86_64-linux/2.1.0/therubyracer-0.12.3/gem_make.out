@@ -1,0 +1,40 @@
+/home/suganya/.rvm/rubies/ruby-2.1.7/bin/ruby -r ./siteconf20170824-14196-1syvm8n.rb extconf.rb
+checking for main() in -lpthread... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling value.cc
+compiling rr.cc
+compiling context.cc
+compiling trycatch.cc
+compiling signature.cc
+compiling init.cc
+compiling heap.cc
+compiling constraints.cc
+compiling accessor.cc
+compiling invocation.cc
+compiling template.cc
+compiling function.cc
+compiling constants.cc
+compiling date.cc
+compiling v8.cc
+compiling primitive.cc
+compiling exception.cc
+compiling locker.cc
+compiling gc.cc
+compiling handles.cc
+compiling external.cc
+compiling stack.cc
+compiling array.cc
+compiling backref.cc
+compiling message.cc
+compiling script.cc
+compiling string.cc
+compiling object.cc
+linking shared-object v8/init.so
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 init.so ./.gem.20170824-14196-1jnjw38/v8
+installing default init libraries

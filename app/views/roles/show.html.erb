@@ -1,0 +1,39 @@
+<h1>Role Details</h1>
+
+<%=link_to 'Edit', edit_role_path(@role) %> | <%=link_to 'New', new_role_path %> | <%=link_to 'Index', roles_path %></br></br>
+
+<div class="row">
+	<div class="col-md-3">
+		<b>Name </b>
+	</div>
+	<div class="col-md-7"><%= @role.name %></div>
+</div>
+
+<h3>List Of Users </h3>
+
+<div class="row">
+	<div class="col-md-10">
+		<% if @role.users.present? %>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Name </th>
+						<th>Email</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @role.users.each do |user| %>
+						<tr>
+							<td><%= link_to(user.first_name.to_s + ' ' + user.last_name.to_s , user) %></td>
+							<td><%= user.email %></td>
+							<td><%=link_to 'Edit', edit_user_path(user) %></td>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
+		<% else %>
+			No Records Found
+		<% end %>
+	</div>
+</div>

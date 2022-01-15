@@ -1,0 +1,28 @@
+<h1>User Details</h1>
+<%=link_to 'Edit', edit_user_path(@user) %> | <%=link_to 'New', new_user_path %> | <%=link_to 'Index', users_path %></br></br>
+
+<div class="row">
+	<div class="col-md-3">
+		<b>First Name </b>
+	</div>
+	<div class="col-md-7"><%= @user.first_name %></div>
+</div>
+<div class="row">
+	<div class="col-md-3">
+		<b>Last Name </b>
+	</div>
+	<div class="col-md-7"><%= @user.last_name %></div>
+</div>
+<div class="row">
+	<div class="col-md-3">
+		<b>Email </b>
+	</div>
+	<div class="col-md-7"><%= @user.email %></div>
+</div>
+<div class="row">
+	<div class="col-md-3">
+		<b>Role </b>
+	</div>
+	<div class="col-md-7"><%=raw @user.roles.map { |e| e.present? ? link_to(e.name, e) : '' }.join(' ,') %></div>
+</div>
+

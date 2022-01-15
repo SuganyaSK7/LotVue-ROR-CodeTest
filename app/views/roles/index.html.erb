@@ -1,0 +1,32 @@
+<h1>Roles</h1>
+
+<p><%=link_to 'Add New Role', new_role_path, :class => "btn btn-xs btn-primary" %> | <%=link_to 'Hide Roles', hidden_roles_roles_path, :class => "btn btn-xs btn-primary" %> | <%=link_to 'Add New User', new_user_path, :class => "btn btn-xs btn-primary" %> | <%=link_to 'Show All Users', '#', :class => "btn btn-xs btn-primary", :id => "show_user" %></p>
+<div class="row" >
+	<div class="col-md-8">
+		<% if @roles.present? %>
+			<table class="table table-striped" id="roles_table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @roles.each do |role| %>
+						<tr>
+							<td><%=link_to role.name,role %></td>
+							<td><%=link_to 'Edit', edit_role_path(role) %></td>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
+		<% else %>
+			No Records Found
+		<% end %>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12" id ="disp_users">
+	</div>
+</div>
